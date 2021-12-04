@@ -17,11 +17,16 @@
 - [✍️ Author](#-author)
 - [📃 License](#-license)
 
-# Examples
+## Features
+* Customizable background and thumb/foreground
 * Normal Joystick Example 
 * Locking Joystick Example 
 * Polar or XY Coordinates   
+
+<p align="center">
 #### View these examples to see how to make your own Joystick!
+</p>
+
 <p align="center">
   <img src="./Readme_Assets/LockingJoystick.gif" width="150" />
   <img src="./Readme_Assets/NormalJoystick.gif" width="150" />
@@ -35,6 +40,7 @@
 </p>
 
 
+
 # 📲 How to Install 🕹️
 
 ### Swift Package Manager SPM
@@ -44,6 +50,7 @@ Add this repository's URL
 ### Cocoapods
 Add this line to your podfile
 `pod SwiftUIJoystick`
+
 
 
 # 🛠 How to use
