@@ -1,13 +1,13 @@
-# 🕹️ SwiftUIJoystick 🕹️
+# SwiftUIJoystick 🕹️
 ## A customizable Joystick made with SwiftUI
 ## Create your own Base and Thumb/Handle view using SwiftUI
  
-- [📲 Installation](#how-to-install)
+- [📲 Installation](#-how-to-install-%EF%B8%8F)
   - [Swift Package Manager](#swift-package-manager-spm)
   - [Cocoapods](#cocoapods)
-- [🛠 How to use](#how-to-use)
+- [🛠 How to use](#-how-to-use)
   - [Example Code](#example-code)
-- [🛠 How to Customize](#how-to-customize)
+- [🛠 How to Customize](#-how-to-customize)
   - [Setup Joystick Monitor](#setup-a-joystick-monitor)
   - [Use Joystick Builder](#option-1)
   - [Use Joystick Recognizer](#option-2)
@@ -20,7 +20,7 @@
 * Locking Joystick Example 
 * Polar or XY Coordinates   
 #### View this example to see how to make a Joystick Control View Object for your app!
-<p align="center">
+<div align="center">
     <p align="center">
       <img src="./Readme_Assets/NormalJoystick.gif" width="150" />
       <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/ExampleJoystick.swift">(View Code Example)</a>
@@ -35,7 +35,7 @@
       <img src="./Readme_Assets/LongMultiUse.gif" width="150" />
       <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift">(View Code Example)</a>
     </p>
-</p>
+</div>
 
 # 📲 How to Install 🕹️
 
