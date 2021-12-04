@@ -13,6 +13,7 @@
 		2FA4359E275BE3240045839D /* ExampleJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA43593275BE3240045839D /* ExampleJoystick.swift */; };
 		2FA435AA275BE38A0045839D /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA435A9275BE38A0045839D /* TestingView.swift */; };
 		2FB1D424275BE49F00FA20B2 /* SwiftUIJoystickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1D423275BE49F00FA20B2 /* SwiftUIJoystickApp.swift */; };
+		2FDF3079275BECF200ED69EB /* SwiftUIJoystick in Frameworks */ = {isa = PBXBuildFile; productRef = 2FDF3078275BECF200ED69EB /* SwiftUIJoystick */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FDF3079275BECF200ED69EB /* SwiftUIJoystick in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = SwiftUIJoystickApp;
+			packageProductDependencies = (
+				2FDF3078275BECF200ED69EB /* SwiftUIJoystick */,
+			);
 			productName = SwiftUIJoystickApp;
 			productReference = 2F63FF0A275AF7400012DEDD /* SwiftUIJoystickAppApp.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 2F63FF01275AF7400012DEDD;
+			packageReferences = (
+				2FDF3077275BECF200ED69EB /* XCRemoteSwiftPackageReference "SwiftUIJoystick" */,
+			);
 			productRefGroup = 2F63FF0B275AF7400012DEDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FDF3077275BECF200ED69EB /* XCRemoteSwiftPackageReference "SwiftUIJoystick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/michael94ellis/SwiftUIJoystick";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FDF3078275BECF200ED69EB /* SwiftUIJoystick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FDF3077275BECF200ED69EB /* XCRemoteSwiftPackageReference "SwiftUIJoystick" */;
+			productName = SwiftUIJoystick;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F63FF02275AF7400012DEDD /* Project object */;
 }

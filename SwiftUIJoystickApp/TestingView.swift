@@ -17,8 +17,8 @@ struct TestingView: View {
     @StateObject private var monitorRect = JoystickMonitor(width: 100)
     let widthRect: CGFloat = 100
     /// For the Custom Joystick example
-    @StateObject private var monitorCircle = JoystickMonitor(width: 100)
-    let widthCircle: CGFloat = 100
+    @StateObject private var monitorCircle = JoystickMonitor(width: 130)
+    let widthCircle: CGFloat = 130
     
     var body: some View {
         VStack {
@@ -44,7 +44,7 @@ struct TestingView: View {
                 
             }
             // Example 2
-            
+            Divider()
             VStack{
                 Text("RoundedRectangle with Circle Thumb")
                 JoystickBuilder(
@@ -65,7 +65,7 @@ struct TestingView: View {
                 Text("Pola Point = (radians: \(self.monitorRect.polarPoint.degrees.formattedString), y: \(self.monitorRect.polarPoint.distance.formattedString)")
             }
             // Example 3
-            
+            Divider()
             VStack{
                 Text("Circle with Rectangle Thumb")
                 JoystickBuilder(
@@ -78,7 +78,9 @@ struct TestingView: View {
                     },
                     foreground: {
                         // Example Thumb
-                        Rectangle().fill(Color.gray)
+                        Text("TEXT").background(RoundedRectangle(cornerRadius: 4).fill(Color.gray)
+                                                    .frame(width: 65, height: 42))
+                            .frame(width: 65, height: 42)
                     },
                     locksInPlace: false)
                 Text("Diameter: 40")
