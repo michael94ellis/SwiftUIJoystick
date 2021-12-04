@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://MichaelRobertEllis.com/projects'
   s.social_media_url = 'https://MichaelRobertEllis.com/contact'
   s.author = "Michael Ellis"
-  s.source = { :git => 'https://github.com/michael94ellis/SwiftUIJoystick.git', :branch => 'master' }
+  s.source = { :git => 'https://github.com/michael94ellis/SwiftUIJoystick.git', :branch => 'main' }
 
   s.ios.deployment_target = '13.0'
 
