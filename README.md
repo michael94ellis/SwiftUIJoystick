@@ -78,3 +78,46 @@ public struct Joystick: View {
     }
 }
 ```
+
+# How to customize
+## Start by making a JoystickMonitor
+You can subscribe to changes
+### Use a JoystickBuilder to build your own Joystick Controls' Background/Base and Thumb/Foreground views
+
+#### Setup the observer JoystickMonitor and width of the joystick
+```
+    @StateObject private var monitor = JoystickMonitor(width: 100)
+    private let draggableDiameter: CGFloat = 100
+```
+
+#### Create the Views    
+```
+    JoystickBuilder(
+        monitor: self.joystickMonitor,
+        width: self.draggableDiameter,
+        shape: .rect,
+        background: {
+            // Example Background
+            RoundedRectangle(cornerRadius: 8).fill(Color.red.opacity(0.5))
+        },
+        foreground: {
+            // Example Thumb
+            Circle().fill(Color.black)
+        },
+        locksInPlace: false)
+```
+
+### Parameters
+
+| parameter    | type            | description                                                                    | default  |
+| ---------    | --------------- | ------------------------------------------------------------------------------ | -------- |
+| monitor      | JoyStickMonitor | ObservableObect that publishes the Joystick control's XY and Polar coordinates | no       |
+| width        | CGFloat         | The width or diameter of the Joystick control                                  | no       |
+|              |                 | Output values will be from 0-width                                             |          |
+| shape        | JostickShape    | The shape of the Joystick's hitbox area, rectangluar or circular               | no       |
+|              |                 | Valid input: `.rect` or `.circle`                                              |          |
+|              |                 | rect allows corner values (0,0), (0,width), (width,0), and (width,wdth)        |          |
+|              |                 | circle limits monitor output to a circular radius from the Joystick's center   |          |
+| background   | some View       | Any View type input can be put here to create a background for the Joystick    | no       |
+| foreground   | some View       | A View for the thumb or foreground of the Joystick                             | no       |
+| locksInPlace | Bool            | A bool to determine if the Joystick resets back to the center when release     | no       |
