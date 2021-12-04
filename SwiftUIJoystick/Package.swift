@@ -5,12 +5,6 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftUIJoystick",
-    platforms: [
-        .iOS(.v13),         //.v8 - .v13
-        .macOS(.v10_15),    //.v10_10 - .v10_15
-        .tvOS(.v13),        //.v9 - .v13
-        .watchOS(.v6),      //.v2 - .v6
-    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(

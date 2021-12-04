@@ -22,7 +22,7 @@ public struct PolarPoint: PolarCoordinate {
     /// The distance from center/origin
     public var distance: CGFloat
     
-    public static var zero: PolarPoint { PolarPoint(degrees: 0, distance: 0) }
+    public static let zero: PolarPoint = PolarPoint(degrees: 0, distance: 0)
     
     public init(degrees: CGFloat, distance: CGFloat) {
         self.degrees = degrees
