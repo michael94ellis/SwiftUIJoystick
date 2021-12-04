@@ -1,38 +1,43 @@
-# SwiftUIJoystick
+# 🕹️ SwiftUIJoystick 🕹️
 ## A customizable Joystick made with SwiftUI
 ## Create your own Base and Thumb/Handle view using SwiftUI
  
-- [Installation](#how-to-install)
+- [📲 Installation](#how-to-install)
   - [Swift Package Manager](#swift-package-manager-spm)
   - [Cocoapods](#cocoapods)
 - [🛠 How to use](#how-to-use)
-  - [Example Code](#examle-code)
+  - [Example Code](#example-code)
 - [🛠 How to Customize](#how-to-customize)
   - [Setup Joystick Monitor](#setup-a-joystick-monitor)
   - [Use Joystick Builder](#option-1)
   - [Use Joystick Recognizer](#option-2)
+  - [Joystick Parameters](#parameters)
 - [👨‍💻 Contributors](#-contributors)
 - [✍️ Author](#-author)
 - [📃 License](#-license)
-- [📦 Projects](#-projects)
 
-### Normal Joystick Example <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/ExampleJoystick.swift">(View Code Example)</a>
+* Normal Joystick Example 
+* Locking Joystick Example 
+* Polar or XY Coordinates   
 #### View this example to see how to make a Joystick Control View Object for your app!
 <p align="center">
-  <img src="./Readme_Assets/NormalJoystick.gif" width="150" />
-</p>
- 
-### Locking Joystick Example <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift#L30-L40">(View Code Example)</a>
-<p align="center">
-  <img src="./Readme_Assets/LockingJoystick.gif" width="150" />
-</p>
-  
-### Multiple Joystick Examples <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift">(View Code Example)</a>
-<p align="center">
-  <img src="./Readme_Assets/LongMultiUse.gif" width="150" />
+    <p align="center">
+      <img src="./Readme_Assets/NormalJoystick.gif" width="150" />
+      <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/ExampleJoystick.swift">(View Code Example)</a>
+    </p>
+     
+    <p align="center">
+      <img src="./Readme_Assets/LockingJoystick.gif" width="150" />
+      <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift#L30-L40">(View Code Example)</a>
+    </p>
+      
+    <p align="center">
+      <img src="./Readme_Assets/LongMultiUse.gif" width="150" />
+      <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift">(View Code Example)</a>
+    </p>
 </p>
 
-# How to Install
+# 📲 How to Install 🕹️
 
 ### Swift Package Manager SPM
 Add this repository's URL
@@ -43,7 +48,7 @@ Add this line to your podfile
 `pod SwiftUIJoystick`
 
 
-# How to use
+# 🛠 How to use
 ### Example Code: 
 ### Ready to Copy, Paste, and Use (after install with SPM or Pods)
 
@@ -92,7 +97,7 @@ public struct Joystick: View {
 }
 ```
 
-# How to customize
+# 🛠 How to customize
 ## Start by making a JoystickMonitor
 You can subscribe to changes
 ### Use a JoystickBuilder to build your own Joystick Controls' Background/Base and Thumb/Foreground views
@@ -128,7 +133,10 @@ JoystickBuilder(
 Apply the joystickGestureRecognizer to any of your views to receive updates on the monitor
 ```
 YourView()
-    .joystickGestureRecognizer(monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
+    .joystickGestureRecognizer(monitor: self.joystickMonitor, 
+                               width: self.width, 
+                               shape: self.controlShape,
+                               locksInPlace: self.locksInPlace)
 ```
 
 ### Parameters
@@ -142,3 +150,15 @@ YourView()
 | background   | some View       | Any View type input can be put here to create a background for the Joystick    | no       |
 | foreground   | some View       | A View for the thumb or foreground of the Joystick                             | no       |
 | locksInPlace | Bool            | A bool to determine if the Joystick resets back to the center when release     | no       |
+
+## 👨‍💻 Contributors
+
+All issue reports, feature requests, pull requests and GitHub stars are welcomed and much appreciated.
+
+## ✍️ Author
+
+Simon Bachmann
+
+## 📃 License
+
+`SwiftUIJoystick` is available under the MIT license. See the [LICENSE](https://github.com/michael94ellis/SwiftUIJoystick/blob/main/LICENSE) file for more info
