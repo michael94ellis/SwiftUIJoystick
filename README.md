@@ -20,22 +20,20 @@
 * Locking Joystick Example 
 * Polar or XY Coordinates   
 #### View this example to see how to make a Joystick Control View Object for your app!
-<div align="center">
-    <p align="center">
-      <img src="./Readme_Assets/NormalJoystick.gif" width="150" />
-      <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/ExampleJoystick.swift">(View Code Example)</a>
-    </p>
-     
-    <p align="center">
-      <img src="./Readme_Assets/LockingJoystick.gif" width="150" />
-      <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift#L30-L40">(View Code Example)</a>
-    </p>
-      
-    <p align="center">
-      <img src="./Readme_Assets/LongMultiUse.gif" width="150" />
-      <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift">(View Code Example)</a>
-    </p>
-</div>
+<p align="center">
+  <img src="./Readme_Assets/NormalJoystick.gif" width="150" />
+  <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/ExampleJoystick.swift">(View Code Example)</a>
+</p>
+ 
+<p align="center">
+  <img src="./Readme_Assets/LockingJoystick.gif" width="150" />
+  <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift#L30-L40">(View Code Example)</a>
+</p>
+  
+<p align="center">
+  <img src="./Readme_Assets/LongMultiUse.gif" width="150" />
+  <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/TestingView.swift">(View Code Example)</a>
+</p>
 
 # 📲 How to Install 🕹️
 
