@@ -30,7 +30,7 @@ public extension CGPoint {
         return radian
     }
     
-    func getDegrees(from origin: CGPoint = CGPoint.zero) -> PolarPoint {
+    func getPolarPoint(from origin: CGPoint = CGPoint.zero) -> PolarPoint {
         let deltaX = self.x - origin.x
         let deltaY = self.y - origin.y
         let radians = -1 * atan2(deltaY, deltaX)

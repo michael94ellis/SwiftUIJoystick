@@ -13,7 +13,7 @@ let package = Package(
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
+        .library(   
             name: "SwiftUIJoystick",
             targets: ["SwiftUIJoystick"]),
     ],
@@ -26,6 +26,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SwiftUIJoystick",
-            dependencies: [])
+            dependencies: []),
+        .testTarget(
+            name: "SwiftUIJoystickTests",
+            dependencies: []),
     ]
 )

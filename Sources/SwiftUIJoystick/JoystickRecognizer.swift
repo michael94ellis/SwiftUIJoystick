@@ -57,7 +57,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
     /// Sets the coordinates of the user's thumb to the JoystickMonitor, which emits an object change since it is an observable
     internal func emitPosition(for xyPoint: CGPoint) {
         self.joystickMonitor.xyPoint = xyPoint
-        self.joystickMonitor.polarPoint = xyPoint.getDegrees(from: self.midPoint)
+        self.joystickMonitor.polarPoint = xyPoint.getPolarPoint(from: self.midPoint)
     }
     
     /// Provides a Rectangular area in which the Joystick control can move within and report values for
