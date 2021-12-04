@@ -138,10 +138,7 @@ Apply the joystickGestureRecognizer to any of your views to receive updates on t
 | monitor      | JoyStickMonitor | ObservableObect that publishes the Joystick control's XY and Polar coordinates | no       |
 | width        | CGFloat         | The width or diameter of the Joystick control                                  | no       |
 |              |                 | Output values will be from 0-width                                             |          |
-| shape        | JostickShape    | The shape of the Joystick's hitbox area, rectangluar or circular   
-                                   Valid input: `.rect` or `.circle`                 
-                                   rect allows corner values (0,0), (0,width), (width,0), and (width,wdth) 
-                                   circle limits monitor output to a circular radius from the Joystick's center   | no       |
+| shape        | JostickShape    | The shape of the Joystick's hitbox area, rectangluar or circular \n Valid input: `.rect` or `.circle` /n rect allows corner values (0,0), (0,width), (width,0), and (width,wdth) /n circle limits monitor output to a circular radius from the Joystick's center   | no       |
 | background   | some View       | Any View type input can be put here to create a background for the Joystick    | no       |
 | foreground   | some View       | A View for the thumb or foreground of the Joystick                             | no       |
 | locksInPlace | Bool            | A bool to determine if the Joystick resets back to the center when release     | no       |
