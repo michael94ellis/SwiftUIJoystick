@@ -100,35 +100,35 @@ You can subscribe to changes
 ## Setup a Joystick Monitor
 #### Setup the observer JoystickMonitor and width of the joystick
 ```
-    @StateObject private var monitor = JoystickMonitor(width: 100)
-    private let draggableDiameter: CGFloat = 100
+@StateObject private var monitor = JoystickMonitor(width: 100)
+private let draggableDiameter: CGFloat = 100
 ```
 
 ## Option 1
 #### Create the Joystick using the Joystick Builder
 Joystick Builder applies the joystickGestureRecognizer
 ```
-    JoystickBuilder(
-        monitor: self.joystickMonitor,
-        width: self.draggableDiameter,
-        shape: .rect,
-        background: {
-            // Example Background
-            RoundedRectangle(cornerRadius: 8).fill(Color.red.opacity(0.5))
-        },
-        foreground: {
-            // Example Thumb
-            Circle().fill(Color.black)
-        },
-        locksInPlace: false)
+JoystickBuilder(
+    monitor: self.joystickMonitor,
+    width: self.draggableDiameter,
+    shape: .rect,
+    background: {
+        // Example Background
+        RoundedRectangle(cornerRadius: 8).fill(Color.red.opacity(0.5))
+    },
+    foreground: {
+        // Example Thumb
+        Circle().fill(Color.black)
+    },
+    locksInPlace: false)
 ```
 
 ## Option 2
 #### Create your own Joystick tracking View with the JoystickRecognizer
 Apply the joystickGestureRecognizer to any of your views to receive updates on the monitor
 ```
-        YourView()
-            .joystickGestureRecognizer(monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
+YourView()
+    .joystickGestureRecognizer(monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
 ```
 
 ### Parameters
