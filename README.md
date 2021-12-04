@@ -2,6 +2,19 @@
 ## A customizable Joystick made with SwiftUI
 ## Create your own Base and Thumb/Handle view using SwiftUI
  
+- [Installation](#how-to-install)
+  - [Swift Package Manager](#swift-package-manager-spm)
+  - [Cocoapods](#cocoapods)
+- [🛠 How to use](#how-to-use)
+  - [Example Code](#examle-code)
+- [🛠 How to Customize](#how-to-customize)
+  - [Setup Joystick Monitor](#setup-a-joystick-monitor)
+  - [Use Joystick Builder](#option-1)
+  - [Use Joystick Recognizer](#option-2)
+- [👨‍💻 Contributors](#-contributors)
+- [✍️ Author](#-author)
+- [📃 License](#-license)
+- [📦 Projects](#-projects)
 
 ### Normal Joystick Example <a href="https://github.com/michael94ellis/SwiftUIJoystick/blob/main/SwiftUIJoystickApp/ExampleJoystick.swift">(View Code Example)</a>
 #### View this example to see how to make a Joystick Control View Object for your app!
@@ -84,13 +97,16 @@ public struct Joystick: View {
 You can subscribe to changes
 ### Use a JoystickBuilder to build your own Joystick Controls' Background/Base and Thumb/Foreground views
 
+## Setup a Joystick Monitor
 #### Setup the observer JoystickMonitor and width of the joystick
 ```
     @StateObject private var monitor = JoystickMonitor(width: 100)
     private let draggableDiameter: CGFloat = 100
 ```
 
-#### Create the Views    
+## Option 1
+#### Create the Joystick using the Joystick Builder
+Joystick Builder applies the joystickGestureRecognizer
 ```
     JoystickBuilder(
         monitor: self.joystickMonitor,
@@ -107,6 +123,14 @@ You can subscribe to changes
         locksInPlace: false)
 ```
 
+## Option 2
+#### Create your own Joystick tracking View with the JoystickRecognizer
+Apply the joystickGestureRecognizer to any of your views to receive updates on the monitor
+```
+        YourView()
+            .joystickGestureRecognizer(monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
+```
+
 ### Parameters
 
 | parameter    | type            | description                                                                    | default  |
@@ -114,10 +138,10 @@ You can subscribe to changes
 | monitor      | JoyStickMonitor | ObservableObect that publishes the Joystick control's XY and Polar coordinates | no       |
 | width        | CGFloat         | The width or diameter of the Joystick control                                  | no       |
 |              |                 | Output values will be from 0-width                                             |          |
-| shape        | JostickShape    | The shape of the Joystick's hitbox area, rectangluar or circular               | no       |
-|              |                 | Valid input: `.rect` or `.circle`                                              |          |
-|              |                 | rect allows corner values (0,0), (0,width), (width,0), and (width,wdth)        |          |
-|              |                 | circle limits monitor output to a circular radius from the Joystick's center   |          |
+| shape        | JostickShape    | The shape of the Joystick's hitbox area, rectangluar or circular   
+                                   Valid input: `.rect` or `.circle`                 
+                                   rect allows corner values (0,0), (0,width), (width,0), and (width,wdth) 
+                                   circle limits monitor output to a circular radius from the Joystick's center   | no       |
 | background   | some View       | Any View type input can be put here to create a background for the Joystick    | no       |
 | foreground   | some View       | A View for the thumb or foreground of the Joystick                             | no       |
 | locksInPlace | Bool            | A bool to determine if the Joystick resets back to the center when release     | no       |

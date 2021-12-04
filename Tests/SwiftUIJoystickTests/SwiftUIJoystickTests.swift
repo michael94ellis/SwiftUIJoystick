@@ -3,15 +3,21 @@ import XCTest
 
 final class SwiftUIJoystickTests: XCTestCase {
     
-    func testPolarPoint() throws {
+    func testPolarPointZero() throws {
+        // Ensure the .zero var is correct
         XCTAssert(PolarPoint.zero.degrees == 0)
         XCTAssert(PolarPoint.zero.distance == 0)
-        var testPoint = PolarPoint(degrees: 9, distance: 9)
+    }
+    func testPolarPointConstructor() throws {
+        // Test the constructor for an arbitrary value
+        let testPoint = PolarPoint(degrees: 9, distance: 9)
         XCTAssert(testPoint.degrees == 9)
         XCTAssert(testPoint.distance == 9)
-        
+    }
+    
+    func testCGPointGetPolarPoint() throws {
         let testCGPoint = CGPoint(x: 1, y: 0)
-        testPoint = testCGPoint.getPolarPoint()
+        let testPoint = testCGPoint.getPolarPoint()
         XCTAssert(testPoint.degrees == 0)
         XCTAssert(testPoint.distance == 1)
     }
@@ -32,20 +38,23 @@ final class SwiftUIJoystickTests: XCTestCase {
         recognizer.getValidAxisCoordinate(for: &testPoint.y)
         XCTAssert(testPoint.y == validTestValue)
         
-        // too Low
+        // Invalid - Test for Too Low
         testPoint = CGPoint(x: invalidTestValueLow, y: invalidTestValueLow)
+        // X too low
         recognizer.getValidAxisCoordinate(for: &testPoint.x)
         XCTAssert(testPoint.x != invalidTestValueLow)
         XCTAssert(testPoint.x == 0)
-
+        // Y too low
         recognizer.getValidAxisCoordinate(for: &testPoint.y)
         XCTAssert(testPoint.y != invalidTestValueLow)
         XCTAssert(testPoint.y == 0)
-        // too high
+        // Invalid - Test for Too High
         testPoint = CGPoint(x: invalidTestValueHigh, y: invalidTestValueHigh)
+        // X too high
         recognizer.getValidAxisCoordinate(for: &testPoint.x)
         XCTAssert(testPoint.x != invalidTestValueHigh)
         XCTAssert(testPoint.x == testWidth)
+        // Y too high
         recognizer.getValidAxisCoordinate(for: &testPoint.y)
         XCTAssert(testPoint.y != invalidTestValueHigh)
         XCTAssert(testPoint.y == testWidth)
