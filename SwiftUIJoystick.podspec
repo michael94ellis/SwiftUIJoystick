@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SwiftUIJoystick'
-  s.version = '1.0.1'
+  s.version = '1.0.2'
   s.swift_versions = '5.0'
   s.license = 'MIT'
   s.summary = 'This is a customizable SwiftUI Joystick that provides XY and Polar coordinates.'
