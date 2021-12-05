@@ -1,6 +1,10 @@
 # SwiftUIJoystick 🕹️
 ## A customizable Joystick made with SwiftUI
 ## Create your own Base and Thumb/Handle view using SwiftUI
+
+[![SPM](https://img.shields.io/badge/SPM-compatible-green.svg)](https://github.com/michael94ellis/SwiftUIJoystick)
+[![CocoaPods](https://img.shields.io/badge/CocoaPods-compatible-green.svg)](https://cocoapods.org/pods/SwiftUIJoystick)
+[![License: MIT](https://img.shields.io/badge/License-MIT-A31F34.svg)](https://opensource.org/licenses/MIT)
  
 - [Examples](#examples)
 - [📲 Installation](#-how-to-install-%EF%B8%8F)
@@ -162,7 +166,7 @@ All issue reports, feature requests, pull requests and GitHub stars are welcomed
 
 ## ✍️ Author
 
-Simon Bachmann
+Michael Ellis
 
 ## 📃 License
 
