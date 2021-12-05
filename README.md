@@ -164,6 +164,15 @@ YourView()
 
 All issue reports, feature requests, pull requests and GitHub stars are welcomed and much appreciated.
 
+To make a contribution
+1. Fork this repo
+2. Make your changes and test
+3. Make a Pull Request
+4. After merge update podspec version
+5. Push changes 
+6. Create new version tag to match podspec version
+7. Update pods repo, run this command in the package directory 'pod trunk push SwiftUIJoystick.podspec'
+
 ## ✍️ Author
 
 Michael Ellis
