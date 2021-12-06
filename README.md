@@ -28,7 +28,7 @@
 * Polar or XY Coordinates   
 
 <p align="center">
-#### View these examples to see how to make your own Joystick!
+<h3>View these examples to see how to make your own Joystick!</h3>
 </p>
 
 <p align="center">
