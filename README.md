@@ -34,6 +34,9 @@
 <p align="center">
 <h3>View these examples to see how to make your own Joystick!</h3>
 </p>
+<p align="center">
+  <img src="./Readme_Assets/joystick-nice.gif" width="150" />
+</p>
 
 <p align="center">
   <img src="./Readme_Assets/LockingJoystick.gif" width="150" />
