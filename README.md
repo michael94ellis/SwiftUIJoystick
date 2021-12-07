@@ -2,6 +2,10 @@
 ## A customizable Joystick made with SwiftUI
 ## Create your own Base and Thumb/Handle view using SwiftUI
 
+<p align="center">
+  <img src="./Readme_Assets/joystick-nice.gif" width="150" />
+</p>
+
 [![SPM](https://img.shields.io/badge/SPM-compatible-green.svg)](https://github.com/michael94ellis/SwiftUIJoystick)
 [![CocoaPods](https://img.shields.io/badge/CocoaPods-compatible-green.svg)](https://cocoapods.org/pods/SwiftUIJoystick)
 [![License: MIT](https://img.shields.io/badge/License-MIT-A31F34.svg)](https://opensource.org/licenses/MIT)
