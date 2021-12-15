@@ -174,11 +174,12 @@ All issue reports, feature requests, pull requests and GitHub stars are welcomed
 To make a contribution
 1. Fork this repo
 2. Make your changes and test
-3. Make a [Pull Request](https://github.com/michael94ellis/SwiftUIJoystick/pulls)
-4. After merge update podspec version and project version appropriately (Major/Minor/Patch paradigm)
-5. Push changes 
-6. Create new [version tag](https://github.com/michael94ellis/SwiftUIJoystick/tags) to match podspec and project version
-7. Update pods repo, run this command in the package directory 'pod trunk push SwiftUIJoystick.podspec'
+3. Update readme as neded and add yourself to Authors section
+4. Make a [Pull Request](https://github.com/michael94ellis/SwiftUIJoystick/pulls)
+5. After merge update podspec version and project version appropriately (Major/Minor/Patch paradigm)
+6. Push changes 
+7. Create new [version tag](https://github.com/michael94ellis/SwiftUIJoystick/tags) to match podspec and project version
+8. Update pods repo, run this command in the package directory 'pod trunk push SwiftUIJoystick.podspec'
 
 ## ✍️ Author
 
