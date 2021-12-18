@@ -48,14 +48,19 @@ public struct JoystickGestureRecognizer: ViewModifier {
         }
     }
     
-    /// Determine if the given value is < 0 or > width, if either is true set it to the bound it exceeds
-    ///
-    /// - Parameter value: will inout var overwrite the given CGFloat to be 0 if less than 0, or width if greater than width
     internal func getValidAxisCoordinate(for value: inout CGFloat) {
         if value <= 0 {
             value = 0
         } else {
             value = (value / self.width) * 100
+        }
+    }
+    
+    internal func getValidThumbCoordinate(for value: inout CGFloat) {
+        if value <= 0 {
+            value = 0
+        } else if value > width {
+            value = self.width
         }
     }
     
@@ -74,7 +79,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onChanged({ value in
-                        self.thumbPosition = value.location
+                        self.thumbPosition = CGPoint(x: value.location.x, y: value.location.y)
                         var x: CGFloat = value.location.x
                         var y: CGFloat = value.location.y
                         getValidAxisCoordinate(for: &x)
@@ -100,6 +105,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                     .onChanged() { value in
                         let distance = self.midPoint.distance(to: value.location)
                         if distance > self.width / 2 {
+                            self.thumbPosition = CGPoint(x: value.location.x, y: value.location.y)
                             // Limit to radius
                             let k = (self.width / 2) / distance
                             var x = (value.location.x - self.midPoint.x) * k + self.midPoint.x
