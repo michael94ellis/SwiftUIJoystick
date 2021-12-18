@@ -128,7 +128,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                             var y: CGFloat = value.location.y
                             getValidAxisCoordinate(for: &x)
                             getValidAxisCoordinate(for: &y)
-                            self.emitPosition(for: value.location)
+                            self.emitPosition(for: CGPoint(x: x, y: y))
                         }
                     }
                     .onEnded({ value in
