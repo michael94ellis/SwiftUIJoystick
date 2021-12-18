@@ -16,6 +16,7 @@ public struct JoystickBuilder<background: View, foreground: View>: View {
     private(set) public var controlShape: JoystickShape
     
     @ObservedObject private(set) public var joystickMonitor: JoystickMonitor
+    @State private(set) public var thumbPosition: CGPoint = .zero
     /// The view displayed as the Joystick background, which also holds a Joystick DragGesture recognizer
     @ViewBuilder public var controlBackground: () -> background
     /// The view displayed as the Joystick Thumb Control, which also holds a Joystick DragGesture recognizer
@@ -42,13 +43,11 @@ public struct JoystickBuilder<background: View, foreground: View>: View {
     
     public var body: some View {
         controlBackground()
-            .frame(width: self.width, height: self.width)
-            .joystickGestureRecognizer(monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
+            .joystickGestureRecognizer(thumbPosition: self.$thumbPosition, monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
             .overlay(
                 controlThumb()
-                    .frame(width: self.width / 4, height: self.width / 4)
-                    .position(x: self.joystickMonitor.xyPoint.x, y: self.joystickMonitor.xyPoint.y)
-                    .joystickGestureRecognizer(monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
+                    .position(x: self.thumbPosition.x, y: self.thumbPosition.y)
+                    .joystickGestureRecognizer(thumbPosition: self.$thumbPosition, monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
                     .onAppear(perform: {
                         let midPoint = self.width / 2
                         self.joystickMonitor.xyPoint = CGPoint(x: midPoint, y: midPoint)

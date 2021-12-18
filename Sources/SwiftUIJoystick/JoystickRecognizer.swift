@@ -9,6 +9,7 @@ import SwiftUI
 
 /// A convenience SwiftUI ViewModifier to make a view behave like a Joystick
 public struct JoystickGestureRecognizer: ViewModifier {
+    
     @ObservedObject public var joystickMonitor: JoystickMonitor
     /// The size of the control area in which the drag gesture is monitored and reported, is diameter for a circular Joystick
     private var width: CGFloat
@@ -18,6 +19,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
     private let midPoint: CGPoint
     /// Determines whether or not the Joystick Thumb control goes back to the center point when released
     private let locksInPlace: Bool
+    @Binding private(set) public var thumbPosition: CGPoint
     
     /// Creates a custom joystick with the following configuration
     ///
@@ -27,8 +29,9 @@ public struct JoystickGestureRecognizer: ViewModifier {
     ///     parameter background: The view displayed as the Joystick background
     ///     parameter foreground: The view displayed as the Joystick Thumb Control
     ///     parameter locksInPlace: Determines if the thumb control returns to the center point when released
-    public init(monitor: JoystickMonitor, width: CGFloat, type: JoystickShape, locksInPlace locks: Bool) {
+    public init(thumbPosition: Binding<CGPoint>, monitor: JoystickMonitor, width: CGFloat, type: JoystickShape, locksInPlace locks: Bool) {
         self.joystickMonitor = monitor
+        self._thumbPosition = thumbPosition
         self.width = width
         self.midPoint = CGPoint(x: width / 2, y: width / 2)
         self.shapeType = type
@@ -55,6 +58,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
             value = (value / self.width) * 100
         }
     }
+    
     /// Sets the coordinates of the user's thumb to the JoystickMonitor, which emits an object change since it is an observable
     internal func emitPosition(for xyPoint: CGPoint) {
         self.joystickMonitor.xyPoint = xyPoint
@@ -74,8 +78,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                         var y: CGFloat = value.location.y
                         getValidAxisCoordinate(for: &x)
                         getValidAxisCoordinate(for: &y)
-                        let xyPoint = CGPoint(x: x, y: y)
-                        self.emitPosition(for: xyPoint)
+                        self.emitPosition(for: CGPoint(x: x, y: y))
                     })
                     .onEnded({ value in
                         if !locksInPlace {

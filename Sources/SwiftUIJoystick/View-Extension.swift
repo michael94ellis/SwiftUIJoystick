@@ -19,8 +19,8 @@ public extension View {
     ///     parameter foreground: The view displayed as the Joystick Thumb Control
     ///     parameter locksInPlace: default false - Determines if the thumb control returns to the center point when released
     ///     parameter locksInPlace: default false - Determines if the thumb control returns to the center point when released
-    func joystickGestureRecognizer(monitor: JoystickMonitor, width: CGFloat, shape: JoystickShape, locksInPlace locks: Bool = false) -> some View {
-        modifier(JoystickGestureRecognizer(monitor: monitor, width: width, type: shape, locksInPlace: locks))
+    func joystickGestureRecognizer(thumbPosition: Binding<CGPoint>, monitor: JoystickMonitor, width: CGFloat, shape: JoystickShape, locksInPlace locks: Bool = false) -> some View {
+        modifier(JoystickGestureRecognizer(thumbPosition: thumbPosition, monitor: monitor, width: width, type: shape, locksInPlace: locks))
     }
     
 }
