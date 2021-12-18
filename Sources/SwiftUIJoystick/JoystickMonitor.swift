@@ -10,4 +10,6 @@ import SwiftUI
 public class JoystickMonitor: ObservableObject {
     @Published public var xyPoint: CGPoint = .zero
     @Published public var polarPoint: PolarPoint = .zero
+    
+    public init() { }
 }
