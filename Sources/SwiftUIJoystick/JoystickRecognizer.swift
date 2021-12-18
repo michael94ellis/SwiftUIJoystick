@@ -51,10 +51,8 @@ public struct JoystickGestureRecognizer: ViewModifier {
     internal func getValidAxisCoordinate(for value: inout CGFloat) {
         if value <= 0 {
             value = 0
-        } else if value < self.width {
-            value = (value / self.width) * 100
         } else if value > self.width {
-            value = 100
+            value = self.width
         }
     }
     /// Sets the coordinates of the user's thumb to the JoystickMonitor, which emits an object change since it is an observable
