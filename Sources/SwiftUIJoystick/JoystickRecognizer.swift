@@ -74,6 +74,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onChanged({ value in
+                        self.thumbPosition = value.location
                         var x: CGFloat = value.location.x
                         var y: CGFloat = value.location.y
                         getValidAxisCoordinate(for: &x)

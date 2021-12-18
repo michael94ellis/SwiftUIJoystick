@@ -33,9 +33,11 @@ struct TestingView: View {
                     shape: .circle,
                     background: {
                         Circle().fill(Color.blue.opacity(0.9))
+                            .frame(width: widthLocking, height: widthLocking)
                     },
                     foreground: {
                         Circle().fill(Color.black)
+                            .frame(width: widthLocking / 4, height: widthLocking / 4)
                     },
                     locksInPlace: true)
                 Text("Diameter: \(widthLocking)")
