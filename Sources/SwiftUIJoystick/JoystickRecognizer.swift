@@ -109,13 +109,13 @@ public struct JoystickGestureRecognizer: ViewModifier {
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onChanged() { value in
-                        var thumbX = value.location.x
-                        var thumbY = value.location.y
-                        self.getValidThumbCoordinate(for: &thumbX)
-                        self.getValidThumbCoordinate(for: &thumbY)
-                        self.thumbPosition = CGPoint(x: thumbX, y: thumbY)
                         let distance = self.midPoint.distance(to: value.location)
                         if distance > self.width / 2 {
+                            var thumbX = value.location.x
+                            var thumbY = value.location.y
+                            self.getValidThumbCoordinate(for: &thumbX)
+                            self.getValidThumbCoordinate(for: &thumbY)
+                            self.thumbPosition = CGPoint(x: thumbX, y: thumbY)
                             // Limit to radius
                             let k = (self.width / 2) / distance
                             var x = (value.location.x - self.midPoint.x) * k + self.midPoint.x
@@ -125,6 +125,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                             let xyPoint = CGPoint(x: x, y: y)
                             self.emitPosition(for: xyPoint)
                         } else {
+                            self.thumbPosition = value.location
                             self.emitPosition(for: value.location)
                         }
                     }
