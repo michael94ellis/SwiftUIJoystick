@@ -124,6 +124,10 @@ public struct JoystickGestureRecognizer: ViewModifier {
                             self.emitPosition(for: xyPoint)
                         } else {
                             self.thumbPosition = value.location
+                            var x: CGFloat = value.location.x
+                            var y: CGFloat = value.location.y
+                            getValidAxisCoordinate(for: &x)
+                            getValidAxisCoordinate(for: &y)
                             self.emitPosition(for: value.location)
                         }
                     }
