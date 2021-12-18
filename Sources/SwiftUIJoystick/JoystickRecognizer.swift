@@ -51,6 +51,8 @@ public struct JoystickGestureRecognizer: ViewModifier {
     internal func getValidAxisCoordinate(for value: inout CGFloat) {
         if value <= 0 {
             value = 0
+        } else if value > width {
+            value = 100
         } else {
             value = (value / self.width) * 100
         }
@@ -79,7 +81,11 @@ public struct JoystickGestureRecognizer: ViewModifier {
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onChanged({ value in
-                        self.thumbPosition = CGPoint(x: value.location.x, y: value.location.y)
+                        var thumbX = value.location.x
+                        var thumbY = value.location.y
+                        self.getValidThumbCoordinate(for: &thumbX)
+                        self.getValidThumbCoordinate(for: &thumbY)
+                        self.thumbPosition = CGPoint(x: thumbX, y: thumbY)
                         var x: CGFloat = value.location.x
                         var y: CGFloat = value.location.y
                         getValidAxisCoordinate(for: &x)
@@ -103,9 +109,13 @@ public struct JoystickGestureRecognizer: ViewModifier {
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onChanged() { value in
+                        var thumbX = value.location.x
+                        var thumbY = value.location.y
+                        self.getValidThumbCoordinate(for: &thumbX)
+                        self.getValidThumbCoordinate(for: &thumbY)
+                        self.thumbPosition = CGPoint(x: thumbX, y: thumbY)
                         let distance = self.midPoint.distance(to: value.location)
                         if distance > self.width / 2 {
-                            self.thumbPosition = CGPoint(x: value.location.x, y: value.location.y)
                             // Limit to radius
                             let k = (self.width / 2) / distance
                             var x = (value.location.x - self.midPoint.x) * k + self.midPoint.x
