@@ -94,6 +94,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                     })
                     .onEnded({ value in
                         if !locksInPlace {
+                            self.thumbPosition = self.midPoint
                             self.emitPosition(for: self.midPoint)
                         }
                     })
@@ -111,11 +112,6 @@ public struct JoystickGestureRecognizer: ViewModifier {
                     .onChanged() { value in
                         let distance = self.midPoint.distance(to: value.location)
                         if distance > self.width / 2 {
-                            var thumbX = value.location.x
-                            var thumbY = value.location.y
-                            self.getValidThumbCoordinate(for: &thumbX)
-                            self.getValidThumbCoordinate(for: &thumbY)
-                            self.thumbPosition = CGPoint(x: thumbX, y: thumbY)
                             // Limit to radius
                             let k = (self.width / 2) / distance
                             var x = (value.location.x - self.midPoint.x) * k + self.midPoint.x
@@ -123,6 +119,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                             getValidAxisCoordinate(for: &x)
                             getValidAxisCoordinate(for: &y)
                             let xyPoint = CGPoint(x: x, y: y)
+                            self.thumbPosition = xyPoint
                             self.emitPosition(for: xyPoint)
                         } else {
                             self.thumbPosition = value.location
@@ -131,6 +128,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                     }
                     .onEnded({ value in
                         if !locksInPlace {
+                            self.thumbPosition = self.midPoint
                             self.emitPosition(for: self.midPoint)
                         }
                     })
