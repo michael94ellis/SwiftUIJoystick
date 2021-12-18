@@ -185,6 +185,10 @@ To make a contribution
 
 Michael Ellis
 
+Inspired by Bradhowes Joystick for Swift, I had used this previously but I switched to pure SwiftUI
+
+https://github.com/bradhowes/Joystick
+
 ## 📃 License
 
 `SwiftUIJoystick` is available under the MIT license. See the [LICENSE](https://github.com/michael94ellis/SwiftUIJoystick/blob/main/LICENSE) file for more info
