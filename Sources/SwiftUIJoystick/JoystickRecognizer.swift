@@ -33,8 +33,8 @@ public struct JoystickGestureRecognizer: ViewModifier {
         self.midPoint = CGPoint(x: width / 2, y: width / 2)
         self.shapeType = type
         self.locksInPlace = locks
-        self.joystickMonitor.xyPoint = self.midPoint
     }
+    
     /// Produce the correct shape of Joystick
     public func body(content: Content) -> some View {
         switch self.shapeType {
@@ -52,7 +52,9 @@ public struct JoystickGestureRecognizer: ViewModifier {
         if value <= 0 {
             value = 0
         } else if value > self.width {
-            value = self.width
+            value = 100
+        } else {
+            value = (value / self.width) * 100
         }
     }
     /// Sets the coordinates of the user's thumb to the JoystickMonitor, which emits an object change since it is an observable

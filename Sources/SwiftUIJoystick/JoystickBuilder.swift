@@ -49,6 +49,10 @@ public struct JoystickBuilder<background: View, foreground: View>: View {
                     .frame(width: self.width / 4, height: self.width / 4)
                     .position(x: self.joystickMonitor.xyPoint.x, y: self.joystickMonitor.xyPoint.y)
                     .joystickGestureRecognizer(monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
+                    .onAppear(perform: {
+                        let midPoint = self.width / 2
+                        self.joystickMonitor.xyPoint = CGPoint(x: midPoint, y: midPoint)
+                    })
             )
     }
 }

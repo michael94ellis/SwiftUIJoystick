@@ -34,9 +34,9 @@ final class SwiftUIJoystickTests: XCTestCase {
         // valid
         var testPoint = CGPoint(x: validTestValue,y: validTestValue)
         recognizer.getValidAxisCoordinate(for: &testPoint.x)
-        XCTAssert(testPoint.x == validTestValue)
+        XCTAssert(testPoint.x == (validTestValue / testWidth) * 100)
         recognizer.getValidAxisCoordinate(for: &testPoint.y)
-        XCTAssert(testPoint.y == validTestValue)
+        XCTAssert(testPoint.y == (validTestValue / testWidth) * 100)
         
         // Invalid - Test for Too Low
         testPoint = CGPoint(x: invalidTestValueLow, y: invalidTestValueLow)
