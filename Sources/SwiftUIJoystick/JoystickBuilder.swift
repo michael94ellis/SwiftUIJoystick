@@ -50,10 +50,10 @@ public struct JoystickBuilder<background: View, foreground: View>: View {
                     .frame(width: self.width / 4, height: self.width / 4)
                     .position(x: self.thumbPosition.x, y: self.thumbPosition.y)
                     .joystickGestureRecognizer(thumbPosition: self.$thumbPosition, monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
-                    .onAppear(perform: {
-                        let midPoint = self.width / 2
-                        self.joystickMonitor.xyPoint = CGPoint(x: midPoint, y: midPoint)
-                    })
             )
+            .onAppear(perform: {
+                let midPoint = self.width / 2
+                self.thumbPosition = CGPoint(x: midPoint, y: midPoint)
+            })
     }
 }
