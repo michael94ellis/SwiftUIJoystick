@@ -95,7 +95,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                     .onEnded({ value in
                         if !locksInPlace {
                             self.thumbPosition = self.midPoint
-                            self.emitPosition(for: self.midPoint)
+                            self.emitPosition(for: .zero)
                         }
                     })
             )
@@ -134,7 +134,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
                     .onEnded({ value in
                         if !locksInPlace {
                             self.thumbPosition = self.midPoint
-                            self.emitPosition(for: self.midPoint)
+                            self.emitPosition(for: .zero)
                         }
                     })
             )
