@@ -43,9 +43,11 @@ public struct JoystickBuilder<background: View, foreground: View>: View {
     
     public var body: some View {
         controlBackground()
+            .frame(width: self.width, height: self.width)
             .joystickGestureRecognizer(thumbPosition: self.$thumbPosition, monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
             .overlay(
                 controlThumb()
+                    .frame(width: self.width / 4, height: self.width / 4)
                     .position(x: self.thumbPosition.x, y: self.thumbPosition.y)
                     .joystickGestureRecognizer(thumbPosition: self.$thumbPosition, monitor: self.joystickMonitor, width: self.width, shape: self.controlShape, locksInPlace: self.locksInPlace)
                     .onAppear(perform: {
