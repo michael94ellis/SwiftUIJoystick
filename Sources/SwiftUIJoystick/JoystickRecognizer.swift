@@ -51,8 +51,6 @@ public struct JoystickGestureRecognizer: ViewModifier {
     internal func getValidAxisCoordinate(for value: inout CGFloat) {
         if value <= 0 {
             value = 0
-        } else if value > self.width {
-            value = 100
         } else {
             value = (value / self.width) * 100
         }

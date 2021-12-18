@@ -11,13 +11,13 @@ import SwiftUIJoystick
 struct TestingView: View {
     
     /// For the Custom Joystick example
-    @StateObject private var monitorLocking = JoystickMonitor(width: 100)
+    @StateObject private var monitorLocking = JoystickMonitor()
     let widthLocking: CGFloat = 100
     /// For the Custom Joystick example
-    @StateObject private var monitorRect = JoystickMonitor(width: 100)
+    @StateObject private var monitorRect = JoystickMonitor()
     let widthRect: CGFloat = 100
     /// For the Custom Joystick example
-    @StateObject private var monitorCircle = JoystickMonitor(width: 130)
+    @StateObject private var monitorCircle = JoystickMonitor()
     let widthCircle: CGFloat = 130
     
     var body: some View {
@@ -38,7 +38,7 @@ struct TestingView: View {
                         Circle().fill(Color.black)
                     },
                     locksInPlace: true)
-                Text("Diameter: 77")
+                Text("Diameter: \(widthLocking)")
                 Text("XY Point = (x: \(self.monitorLocking.xyPoint.x.formattedString), y: \(self.monitorLocking.xyPoint.y.formattedString))")
                 Text("Polar Point = (radians: \(self.monitorLocking.polarPoint.degrees.formattedString), y: \(self.monitorLocking.polarPoint.distance.formattedString)")
                 
@@ -60,7 +60,7 @@ struct TestingView: View {
                         Circle().fill(Color.black)
                     },
                     locksInPlace: false)
-                Text("Diameter: 200")
+                Text("Diameter: \(widthRect)")
                 Text("XY Point = (x: \(self.monitorRect.xyPoint.x.formattedString), y: \(self.monitorRect.xyPoint.y.formattedString))")
                 Text("Pola Point = (radians: \(self.monitorRect.polarPoint.degrees.formattedString), y: \(self.monitorRect.polarPoint.distance.formattedString)")
             }
@@ -83,7 +83,7 @@ struct TestingView: View {
                             .frame(width: 65, height: 42)
                     },
                     locksInPlace: false)
-                Text("Diameter: 40")
+                Text("Diameter: \(widthCircle)")
                 Text("XY Point = (x: \(self.monitorCircle.xyPoint.x.formattedString), y: \(self.monitorCircle.xyPoint.y.formattedString))")
                 Text("Polar Point = (radians: \(self.monitorCircle.polarPoint.degrees.formattedString), y: \(self.monitorCircle.polarPoint.distance.formattedString)")
             }

@@ -11,7 +11,7 @@ import SwiftUIJoystick
 struct ExampleUse: View {
     
     /// For the Custom Joystick example
-    @StateObject private var monitor = JoystickMonitor(width: 100)
+    @StateObject private var monitor = JoystickMonitor()
     
     
     var body: some View {
