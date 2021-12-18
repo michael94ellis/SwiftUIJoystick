@@ -23,20 +23,20 @@ final class SwiftUIJoystickTests: XCTestCase {
     }
     
     func testRectGesture() throws {
-        let testWidth: CGFloat = 100
+        let testWidth: CGFloat = 200
         let validTestValue: CGFloat = 10
         let invalidTestValueHigh: CGFloat = 300
         let invalidTestValueLow: CGFloat = -300
         
-        let monitor = JoystickMonitor(width: testWidth)
+        let monitor = JoystickMonitor()
         let recognizer = JoystickGestureRecognizer(monitor: monitor, width: testWidth, type: .rect, locksInPlace: false)
         
         // valid
         var testPoint = CGPoint(x: validTestValue,y: validTestValue)
         recognizer.getValidAxisCoordinate(for: &testPoint.x)
-        XCTAssert(testPoint.x == validTestValue)
+        XCTAssert(testPoint.x == (validTestValue / testWidth) * 100)
         recognizer.getValidAxisCoordinate(for: &testPoint.y)
-        XCTAssert(testPoint.y == validTestValue)
+        XCTAssert(testPoint.y == (validTestValue / testWidth) * 100)
         
         // Invalid - Test for Too Low
         testPoint = CGPoint(x: invalidTestValueLow, y: invalidTestValueLow)
@@ -53,11 +53,11 @@ final class SwiftUIJoystickTests: XCTestCase {
         // X too high
         recognizer.getValidAxisCoordinate(for: &testPoint.x)
         XCTAssert(testPoint.x != invalidTestValueHigh)
-        XCTAssert(testPoint.x == testWidth)
+        XCTAssert(testPoint.x == 100)
         // Y too high
         recognizer.getValidAxisCoordinate(for: &testPoint.y)
         XCTAssert(testPoint.y != invalidTestValueHigh)
-        XCTAssert(testPoint.y == testWidth)
+        XCTAssert(testPoint.y == 100)
         
     }
 }
