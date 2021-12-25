@@ -56,8 +56,23 @@ public struct JoystickGestureRecognizer: ViewModifier {
         }
     }
     
+    internal func validateCoordinate(_ emitPoint: inout CGPoint) {
+        if emitPoint.x > width {
+            emitPoint.x = width
+        } else if emitPoint.x < -width {
+            emitPoint.x = -width
+        }
+        if emitPoint.y > width {
+            emitPoint.y = width
+        } else if emitPoint.y < -width {
+            emitPoint.y = -width
+        }
+    }
+    
     /// Sets the coordinates of the user's thumb to the JoystickMonitor, which emits an object change since it is an observable
     internal func emitPosition(for xyPoint: CGPoint) {
+        var emitPoint = xyPoint
+        validateCoordinate(&emitPoint)
         self.joystickMonitor.xyPoint = xyPoint
         self.joystickMonitor.polarPoint = xyPoint.getPolarPoint(from: self.midPoint)
     }
