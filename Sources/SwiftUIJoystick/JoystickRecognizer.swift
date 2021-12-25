@@ -73,8 +73,8 @@ public struct JoystickGestureRecognizer: ViewModifier {
     internal func emitPosition(for xyPoint: CGPoint) {
         var emitPoint = xyPoint
         validateCoordinate(&emitPoint)
-        self.joystickMonitor.xyPoint = xyPoint
-        self.joystickMonitor.polarPoint = xyPoint.getPolarPoint(from: self.midPoint)
+        self.joystickMonitor.xyPoint = emitPoint
+        self.joystickMonitor.polarPoint = emitPoint.getPolarPoint(from: self.midPoint)
     }
     
     /// Provides a Rectangular area in which the Joystick control can move within and report values for
