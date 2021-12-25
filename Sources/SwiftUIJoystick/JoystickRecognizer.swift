@@ -48,16 +48,6 @@ public struct JoystickGestureRecognizer: ViewModifier {
         }
     }
     
-    internal func getValidAxisCoordinate(for value: inout CGFloat) {
-        if value <= 0 {
-            value = 0
-        } else if value > width {
-            value = 100
-        } else {
-            value = (value / self.width) * 100
-        }
-    }
-    
     internal func getValidThumbCoordinate(for value: inout CGFloat) {
         if value <= 0 {
             value = 0
@@ -86,11 +76,9 @@ public struct JoystickGestureRecognizer: ViewModifier {
                         self.getValidThumbCoordinate(for: &thumbX)
                         self.getValidThumbCoordinate(for: &thumbY)
                         self.thumbPosition = CGPoint(x: thumbX, y: thumbY)
-                        var x: CGFloat = value.location.x
-                        var y: CGFloat = value.location.y
-                        getValidAxisCoordinate(for: &x)
-                        getValidAxisCoordinate(for: &y)
-                        self.emitPosition(for: CGPoint(x: x, y: y))
+                        let emitX = value.location.x - self.midPoint.x
+                        let emitY = value.location.y - self.midPoint.y
+                        self.emitPosition(for: CGPoint(x: emitX, y: emitY))
                     })
                     .onEnded({ value in
                         if !locksInPlace {
@@ -101,7 +89,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
             )
     }
     
-    /// Provides a Circular area in which the Joystick control can move within and report values for
+    /// Provides a Circular area in which the Joystick control can move within and report values forr
     ///
     /// - parameter content: The view for which to apply the Joystick listener/DragGesture
     public func circleBody(_ content: Content) -> some View {
@@ -114,21 +102,17 @@ public struct JoystickGestureRecognizer: ViewModifier {
                         if distance > self.width / 2 {
                             // Limit to radius
                             let k = (self.width / 2) / distance
-                            var x = (value.location.x - self.midPoint.x) * k + self.midPoint.x
-                            var y = (value.location.y - self.midPoint.y) * k + self.midPoint.y
+                            let x = (value.location.x - self.midPoint.x) * k - self.midPoint.x
+                            let y = (value.location.y - self.midPoint.y) * k - self.midPoint.y
                             // Order matter
                             self.thumbPosition = CGPoint(x: x, y: y)
-                            getValidAxisCoordinate(for: &x)
-                            getValidAxisCoordinate(for: &y)
                             let xyPoint = CGPoint(x: x, y: y)
                             self.emitPosition(for: xyPoint)
                         } else {
                             self.thumbPosition = value.location
-                            var x: CGFloat = value.location.x
-                            var y: CGFloat = value.location.y
-                            getValidAxisCoordinate(for: &x)
-                            getValidAxisCoordinate(for: &y)
-                            self.emitPosition(for: CGPoint(x: x, y: y))
+                            let emitX = value.location.x - self.midPoint.x
+                            let emitY = value.location.y - self.midPoint.y
+                            self.emitPosition(for: CGPoint(x: emitX, y: emitY))
                         }
                     }
                     .onEnded({ value in
