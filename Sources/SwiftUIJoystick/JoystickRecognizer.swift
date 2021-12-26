@@ -95,8 +95,8 @@ public struct JoystickGestureRecognizer: ViewModifier {
                         self.getValidThumbCoordinate(for: &thumbX)
                         self.getValidThumbCoordinate(for: &thumbY)
                         self.thumbPosition = CGPoint(x: thumbX, y: thumbY)
-                        let emit = value.location - self.midPoint
-                        self.emitPosition(for: CGPoint(x: emit.x, y: emit.y))
+                        let position = value.location - self.midPoint
+                        self.emitPosition(for: position)
                     })
                     .onEnded({ value in
                         if !locksInPlace {
@@ -122,12 +122,12 @@ public struct JoystickGestureRecognizer: ViewModifier {
                             let k = (self.width / 2) / distance
                             let position = (value.location - self.midPoint) * k
                             // Order matter
-                            self.thumbPosition = CGPoint(x: position.x, y: position.y)
-                            self.emitPosition(for: CGPoint(x: position.x, y: position.y))
+                            self.thumbPosition = position
+                            self.emitPosition(for: position)
                         } else {
                             self.thumbPosition = value.location
-                            let emit = value.location - self.midPoint
-                            self.emitPosition(for: CGPoint(x: emit.x, y: emit.y))
+                            let position = value.location - self.midPoint
+                            self.emitPosition(for: position)
                         }
                     }
                     .onEnded({ value in
