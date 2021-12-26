@@ -57,19 +57,16 @@ public struct JoystickGestureRecognizer: ViewModifier {
     }
         
     internal func validateCoordinate(_ emitPoint: inout CGPoint) {
+        emitPoint = emitPoint * 2
         if emitPoint.x > width {
             emitPoint.x = width
         } else if emitPoint.x < -width {
             emitPoint.x = -width
-        } else {
-            emitPoint.x *= 2
         }
         if emitPoint.y > width {
             emitPoint.y = width
         } else if emitPoint.y < -width {
             emitPoint.y = -width
-        } else {
-            emitPoint.y *= 2
         }
     }
     
