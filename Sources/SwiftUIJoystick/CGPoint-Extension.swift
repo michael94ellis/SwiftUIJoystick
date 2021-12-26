@@ -9,6 +9,14 @@ import SwiftUI
 
 public extension CGPoint {
     
+    internal static func -(_ lhs: CGPoint, _ rhs: CGPoint) -> CGPoint {
+        return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
+    }
+    
+    internal static func *(_ lhs: CGPoint, _ rhs: CGFloat) -> CGPoint {
+        return CGPoint(x: lhs.x * rhs, y: lhs.y * rhs)
+    }
+    
     func distance(to point: CGPoint) -> CGFloat {
         return sqrt(pow((point.x - x), 2) + pow((point.y - y), 2))
     }

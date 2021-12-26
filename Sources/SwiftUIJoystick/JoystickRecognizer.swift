@@ -95,9 +95,8 @@ public struct JoystickGestureRecognizer: ViewModifier {
                         self.getValidThumbCoordinate(for: &thumbX)
                         self.getValidThumbCoordinate(for: &thumbY)
                         self.thumbPosition = CGPoint(x: thumbX, y: thumbY)
-                        let emitX = value.location.x - self.midPoint.x
-                        let emitY = value.location.y - self.midPoint.y
-                        self.emitPosition(for: CGPoint(x: emitX, y: emitY))
+                        let emit = value.location - self.midPoint
+                        self.emitPosition(for: CGPoint(x: emit.x, y: emit.y))
                     })
                     .onEnded({ value in
                         if !locksInPlace {
@@ -121,17 +120,14 @@ public struct JoystickGestureRecognizer: ViewModifier {
                         if distance > self.width / 2 {
                             // Limit to radius
                             let k = (self.width / 2) / distance
-                            let x = (value.location.x - self.midPoint.x) * k - self.midPoint.x
-                            let y = (value.location.y - self.midPoint.y) * k - self.midPoint.y
+                            let position = (value.location - self.midPoint) * k
                             // Order matter
-                            self.thumbPosition = CGPoint(x: x, y: y)
-                            let xyPoint = CGPoint(x: x, y: y)
-                            self.emitPosition(for: xyPoint)
+                            self.thumbPosition = CGPoint(x: position.x, y: position.y)
+                            self.emitPosition(for: CGPoint(x: position.x, y: position.y))
                         } else {
                             self.thumbPosition = value.location
-                            let emitX = value.location.x - self.midPoint.x
-                            let emitY = value.location.y - self.midPoint.y
-                            self.emitPosition(for: CGPoint(x: emitX, y: emitY))
+                            let emit = value.location - self.midPoint
+                            self.emitPosition(for: CGPoint(x: emit.x, y: emit.y))
                         }
                     }
                     .onEnded({ value in
