@@ -62,7 +62,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
         } else if emitPoint.x < -width {
             emitPoint.x = -width
         } else {
-            emitPoint.y *= 2
+            emitPoint.x *= 2
         }
         if emitPoint.y > width {
             emitPoint.y = width

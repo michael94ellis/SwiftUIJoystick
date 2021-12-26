@@ -64,7 +64,7 @@ struct TestingView: View {
                     locksInPlace: false)
                 Text("Diameter: \(widthRect)")
                 Text("XY Point = (x: \(self.monitorRect.xyPoint.x.formattedString), y: \(self.monitorRect.xyPoint.y.formattedString))")
-                Text("Pola Point = (radians: \(self.monitorRect.polarPoint.degrees.formattedString), y: \(self.monitorRect.polarPoint.distance.formattedString)")
+                Text("Polar Point = (radians: \(self.monitorRect.polarPoint.degrees.formattedString), y: \(self.monitorRect.polarPoint.distance.formattedString)")
             }
             // Example 3
             Divider()
