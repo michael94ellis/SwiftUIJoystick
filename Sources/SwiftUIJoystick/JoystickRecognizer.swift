@@ -118,10 +118,8 @@ public struct JoystickGestureRecognizer: ViewModifier {
                             // Limit to radius
                            let k = (self.width / 2) / distance
                             let position = (value.location - self.midPoint) * k
-                            let x = position.x + self.midPoint.x
-                            let y = position.y + self.midPoint.y
-                            // Order matter
-                            self.thumbPosition = CGPoint(x: x, y: y)
+                            // Order matters
+                            self.thumbPosition = position + self.midPoint
                             self.emitPosition(for: position)
                         } else {
                             self.thumbPosition = value.location
