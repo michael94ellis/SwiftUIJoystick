@@ -101,6 +101,16 @@ public struct JoystickGestureRecognizer: ViewModifier {
                             self.emitPosition(for: .zero)
                         }
                     })
+                    .exclusively(
+                        before:
+                            LongPressGesture(minimumDuration: 0.0, maximumDistance: 0.0)
+                            .onEnded({ _ in
+                                if !locksInPlace {
+                                    self.thumbPosition = self.midPoint
+                                    self.emitPosition(for: .zero)
+                                }
+                            })
+                    )
             )
     }
     
@@ -109,7 +119,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
     /// - parameter content: The view for which to apply the Joystick listener/DragGesture
     public func circleBody(_ content: Content) -> some View {
         content
-            .contentShape(Rectangle())
+            .contentShape(Circle())
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onChanged() { value in
@@ -133,6 +143,16 @@ public struct JoystickGestureRecognizer: ViewModifier {
                             self.emitPosition(for: .zero)
                         }
                     })
+                    .exclusively(
+                        before:
+                            LongPressGesture(minimumDuration: 0.0, maximumDistance: 0.0)
+                            .onEnded({ _ in
+                                if !locksInPlace {
+                                    self.thumbPosition = self.midPoint
+                                    self.emitPosition(for: .zero)
+                                }
+                            })
+                    )
             )
     }
 }
