@@ -169,6 +169,11 @@ YourView()
 
 ## 👨‍💻 Contributors
 
+### A Huge Thank you to
+
+c941010623 Steven.Lin
+https://github.com/c941010623
+
 All issue reports, feature requests, pull requests and GitHub stars are welcomed and much appreciated.
 
 To make a contribution
