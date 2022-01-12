@@ -171,8 +171,8 @@ YourView()
 
 ### A Huge Thank you to
 
-c941010623 Steven.Lin
-https://github.com/c941010623
+#### c941010623 Steven.Lin
+##### https://github.com/c941010623
 
 All issue reports, feature requests, pull requests and GitHub stars are welcomed and much appreciated.
 
@@ -188,7 +188,8 @@ To make a contribution
 
 ## ✍️ Author
 
-Michael Ellis
+#### Michael Ellis
+##### https://www.michaelrobertellis.com/
 
 Inspired by Bradhowes Joystick for Swift, I had used this previously but I switched to pure SwiftUI
 
