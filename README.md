@@ -167,12 +167,7 @@ YourView()
 | foreground   | some View       | A View for the thumb or foreground of the Joystick                             | no       |
 | locksInPlace | Bool            | A bool to determine if the Joystick resets back to the center when release     | no       |
 
-## 👨‍💻 Contributors
-
-### A Huge Thank you to
-
-#### c941010623 Steven.Lin
-##### https://github.com/c941010623
+## 👨‍💻 Contributions
 
 All issue reports, feature requests, pull requests and GitHub stars are welcomed and much appreciated.
 
@@ -186,14 +181,16 @@ To make a contribution
 7. Create new [version tag](https://github.com/michael94ellis/SwiftUIJoystick/tags) to match podspec and project version
 8. Update pods repo, run this command in the package directory 'pod trunk push SwiftUIJoystick.podspec'
 
-## ✍️ Author
+## ✍️ Authors
 
-#### Michael Ellis
-##### https://www.michaelrobertellis.com/
+Created By: Michael Ellis - https://www.michaelrobertellis.com/
 
 Inspired by Bradhowes Joystick for Swift, I had used this previously but I switched to pure SwiftUI
 
 https://github.com/bradhowes/Joystick
+
+A Big Thanks To Steven.Lin
+c941010623 - https://github.com/c941010623
 
 ## 📃 License
 
