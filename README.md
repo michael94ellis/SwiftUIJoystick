@@ -169,9 +169,9 @@ YourView()
 
 ## 👨‍💻 Contributions
 
-All issue reports, feature requests, pull requests and GitHub stars are welcomed and much appreciated.
+All issue reports, feature requests, pull requests and GitHub stars are welcomed and much appreciated. I would enjoy fixing or adding anything you need! 
 
-To make a contribution
+To make a contribution, I would help you if you ask, or
 1. Fork this repo
 2. Make your changes and test
 3. Update readme as neded and add yourself to Authors section
