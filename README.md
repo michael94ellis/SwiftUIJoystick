@@ -21,8 +21,8 @@
   - [Use Joystick Builder](#option-1)
   - [Use Joystick Recognizer](#option-2)
   - [Joystick Parameters](#parameters)
-- [👨‍💻 Contributors](#-contributors)
-- [✍️ Author](#-author)
+- [👨‍💻 Contributors](#-contributions)
+- [✍️ Author](#-authors)
 - [📃 License](#-license)
 
 ## Features
