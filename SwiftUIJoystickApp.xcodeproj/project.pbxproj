@@ -13,10 +13,10 @@
 		2FA4359E275BE3240045839D /* ExampleJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA43593275BE3240045839D /* ExampleJoystick.swift */; };
 		2FA435AA275BE38A0045839D /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA435A9275BE38A0045839D /* TestingView.swift */; };
 		2FB1D424275BE49F00FA20B2 /* SwiftUIJoystickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1D423275BE49F00FA20B2 /* SwiftUIJoystickApp.swift */; };
-		2FDF3079275BECF200ED69EB /* SwiftUIJoystick in Frameworks */ = {isa = PBXBuildFile; productRef = 2FDF3078275BECF200ED69EB /* SwiftUIJoystick */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F4F9D1A2AC3A79C00BF2733 /* SwiftUIJoystick */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIJoystick; sourceTree = "<group>"; };
 		2F63FF0A275AF7400012DEDD /* SwiftUIJoystickAppApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIJoystickAppApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F63FF11275AF7420012DEDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F63FF14275AF7420012DEDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -31,16 +31,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FDF3079275BECF200ED69EB /* SwiftUIJoystick in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4F9D192AC3A79C00BF2733 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2F4F9D1A2AC3A79C00BF2733 /* SwiftUIJoystick */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		2F63FF01275AF7400012DEDD = {
 			isa = PBXGroup;
 			children = (
+				2F4F9D192AC3A79C00BF2733 /* Packages */,
 				2F63FF0C275AF7400012DEDD /* SwiftUIJoystickApp */,
 				2F63FF0B275AF7400012DEDD /* Products */,
 			);
@@ -92,7 +100,6 @@
 			);
 			name = SwiftUIJoystickApp;
 			packageProductDependencies = (
-				2FDF3078275BECF200ED69EB /* SwiftUIJoystick */,
 			);
 			productName = SwiftUIJoystickApp;
 			productReference = 2F63FF0A275AF7400012DEDD /* SwiftUIJoystickAppApp.app */;
@@ -123,7 +130,6 @@
 			);
 			mainGroup = 2F63FF01275AF7400012DEDD;
 			packageReferences = (
-				2FDF3077275BECF200ED69EB /* XCRemoteSwiftPackageReference "SwiftUIJoystick" */,
 			);
 			productRefGroup = 2F63FF0B275AF7400012DEDD /* Products */;
 			projectDirPath = "";
@@ -357,25 +363,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2FDF3077275BECF200ED69EB /* XCRemoteSwiftPackageReference "SwiftUIJoystick" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/michael94ellis/SwiftUIJoystick";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2FDF3078275BECF200ED69EB /* SwiftUIJoystick */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2FDF3077275BECF200ED69EB /* XCRemoteSwiftPackageReference "SwiftUIJoystick" */;
-			productName = SwiftUIJoystick;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F63FF02275AF7400012DEDD /* Project object */;
 }
