@@ -18,7 +18,7 @@ public struct JoystickGestureRecognizer: ViewModifier {
     /// The center point of the Joystick where it goes to rest when not being used in `locksInPlace` is false
     private let midPoint: CGPoint
     /// Determines whether or not the Joystick Thumb control goes back to the center point when released
-    private let locksInPlace: Bool = false
+    private let locksInPlace: Bool
     @Binding private(set) public var thumbPosition: CGPoint
     
     /// Creates a custom joystick with the following configuration

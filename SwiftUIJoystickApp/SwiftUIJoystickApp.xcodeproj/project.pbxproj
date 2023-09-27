@@ -3,86 +3,98 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F63FF12275AF7420012DEDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F63FF11275AF7420012DEDD /* Assets.xcassets */; };
-		2F63FF15275AF7420012DEDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F63FF14275AF7420012DEDD /* Preview Assets.xcassets */; };
-		2FA4359D275BE3240045839D /* ExampleUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA43592275BE3240045839D /* ExampleUse.swift */; };
-		2FA4359E275BE3240045839D /* ExampleJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA43593275BE3240045839D /* ExampleJoystick.swift */; };
-		2FA435AA275BE38A0045839D /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA435A9275BE38A0045839D /* TestingView.swift */; };
-		2FB1D424275BE49F00FA20B2 /* SwiftUIJoystickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1D423275BE49F00FA20B2 /* SwiftUIJoystickApp.swift */; };
+		2FA900222AC3B1EE00EB8FED /* ExampleUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9001E2AC3B1EE00EB8FED /* ExampleUse.swift */; };
+		2FA900232AC3B1EE00EB8FED /* ExampleJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9001F2AC3B1EE00EB8FED /* ExampleJoystick.swift */; };
+		2FA900242AC3B1EE00EB8FED /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA900202AC3B1EE00EB8FED /* TestingView.swift */; };
+		2FA900252AC3B1EE00EB8FED /* SwiftUIJoystickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA900212AC3B1EE00EB8FED /* SwiftUIJoystickApp.swift */; };
+		2FA900292AC3B20300EB8FED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA900262AC3B20300EB8FED /* Assets.xcassets */; };
+		2FA9002A2AC3B20300EB8FED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA900282AC3B20300EB8FED /* Preview Assets.xcassets */; };
+		2FA9002F2AC3B39700EB8FED /* SwiftUIJoystick in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA9002E2AC3B39700EB8FED /* SwiftUIJoystick */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F63FF0A275AF7400012DEDD /* SwiftUIJoystickAppApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIJoystickAppApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F63FF11275AF7420012DEDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F63FF14275AF7420012DEDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2FA43592275BE3240045839D /* ExampleUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleUse.swift; sourceTree = "<group>"; };
-		2FA43593275BE3240045839D /* ExampleJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleJoystick.swift; sourceTree = "<group>"; };
-		2FA435A9275BE38A0045839D /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
-		2FB1D423275BE49F00FA20B2 /* SwiftUIJoystickApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIJoystickApp.swift; sourceTree = "<group>"; };
+		2F9D7E8A2AC3B0F70030B623 /* SwiftUIJoystickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIJoystickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FA9001E2AC3B1EE00EB8FED /* ExampleUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleUse.swift; sourceTree = "<group>"; };
+		2FA9001F2AC3B1EE00EB8FED /* ExampleJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleJoystick.swift; sourceTree = "<group>"; };
+		2FA900202AC3B1EE00EB8FED /* TestingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
+		2FA900212AC3B1EE00EB8FED /* SwiftUIJoystickApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIJoystickApp.swift; sourceTree = "<group>"; };
+		2FA900262AC3B20300EB8FED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FA900282AC3B20300EB8FED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2FA9002C2AC3B2BA00EB8FED /* SwiftUIJoystick */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIJoystick; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F63FF07275AF7400012DEDD /* Frameworks */ = {
+		2F9D7E872AC3B0F70030B623 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA9002F2AC3B39700EB8FED /* SwiftUIJoystick in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F63FF01275AF7400012DEDD = {
+		2F9D7E812AC3B0F70030B623 = {
 			isa = PBXGroup;
 			children = (
-				2F63FF0C275AF7400012DEDD /* SwiftUIJoystickApp */,
-				2F63FF0B275AF7400012DEDD /* Products */,
+				2FA9002B2AC3B2BA00EB8FED /* Packages */,
+				2FA9001F2AC3B1EE00EB8FED /* ExampleJoystick.swift */,
+				2FA9001E2AC3B1EE00EB8FED /* ExampleUse.swift */,
+				2FA900212AC3B1EE00EB8FED /* SwiftUIJoystickApp.swift */,
+				2FA900262AC3B20300EB8FED /* Assets.xcassets */,
+				2FA900272AC3B20300EB8FED /* Preview Content */,
+				2FA900202AC3B1EE00EB8FED /* TestingView.swift */,
+				2F9D7E8B2AC3B0F70030B623 /* Products */,
+				2FA9002D2AC3B39700EB8FED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		2F63FF0B275AF7400012DEDD /* Products */ = {
+		2F9D7E8B2AC3B0F70030B623 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2F63FF0A275AF7400012DEDD /* SwiftUIJoystickAppApp.app */,
+				2F9D7E8A2AC3B0F70030B623 /* SwiftUIJoystickApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2F63FF0C275AF7400012DEDD /* SwiftUIJoystickApp */ = {
+		2FA900272AC3B20300EB8FED /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2FA43593275BE3240045839D /* ExampleJoystick.swift */,
-				2FB1D423275BE49F00FA20B2 /* SwiftUIJoystickApp.swift */,
-				2FA435A9275BE38A0045839D /* TestingView.swift */,
-				2FA43592275BE3240045839D /* ExampleUse.swift */,
-				2F63FF11275AF7420012DEDD /* Assets.xcassets */,
-				2F63FF13275AF7420012DEDD /* Preview Content */,
-			);
-			path = SwiftUIJoystickApp;
-			sourceTree = "<group>";
-		};
-		2F63FF13275AF7420012DEDD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				2F63FF14275AF7420012DEDD /* Preview Assets.xcassets */,
+				2FA900282AC3B20300EB8FED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2FA9002B2AC3B2BA00EB8FED /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2FA9002C2AC3B2BA00EB8FED /* SwiftUIJoystick */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		2FA9002D2AC3B39700EB8FED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F63FF09275AF7400012DEDD /* SwiftUIJoystickApp */ = {
+		2F9D7E892AC3B0F70030B623 /* SwiftUIJoystickApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F63FF18275AF7420012DEDD /* Build configuration list for PBXNativeTarget "SwiftUIJoystickApp" */;
+			buildConfigurationList = 2F9D7E982AC3B0F80030B623 /* Build configuration list for PBXNativeTarget "SwiftUIJoystickApp" */;
 			buildPhases = (
-				2F63FF06275AF7400012DEDD /* Sources */,
-				2F63FF07275AF7400012DEDD /* Frameworks */,
-				2F63FF08275AF7400012DEDD /* Resources */,
+				2F9D7E862AC3B0F70030B623 /* Sources */,
+				2F9D7E872AC3B0F70030B623 /* Frameworks */,
+				2F9D7E882AC3B0F70030B623 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -90,81 +102,79 @@
 			);
 			name = SwiftUIJoystickApp;
 			packageProductDependencies = (
+				2FA9002E2AC3B39700EB8FED /* SwiftUIJoystick */,
 			);
 			productName = SwiftUIJoystickApp;
-			productReference = 2F63FF0A275AF7400012DEDD /* SwiftUIJoystickAppApp.app */;
+			productReference = 2F9D7E8A2AC3B0F70030B623 /* SwiftUIJoystickApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2F63FF02275AF7400012DEDD /* Project object */ = {
+		2F9D7E822AC3B0F70030B623 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					2F63FF09275AF7400012DEDD = {
-						CreatedOnToolsVersion = 13.1;
+					2F9D7E892AC3B0F70030B623 = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = 2F63FF05275AF7400012DEDD /* Build configuration list for PBXProject "SwiftUIJoystickApp" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 2F9D7E852AC3B0F70030B623 /* Build configuration list for PBXProject "SwiftUIJoystickApp" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 2F63FF01275AF7400012DEDD;
-			packageReferences = (
-			);
-			productRefGroup = 2F63FF0B275AF7400012DEDD /* Products */;
+			mainGroup = 2F9D7E812AC3B0F70030B623;
+			productRefGroup = 2F9D7E8B2AC3B0F70030B623 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F63FF09275AF7400012DEDD /* SwiftUIJoystickApp */,
+				2F9D7E892AC3B0F70030B623 /* SwiftUIJoystickApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2F63FF08275AF7400012DEDD /* Resources */ = {
+		2F9D7E882AC3B0F70030B623 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F63FF15275AF7420012DEDD /* Preview Assets.xcassets in Resources */,
-				2F63FF12275AF7420012DEDD /* Assets.xcassets in Resources */,
+				2FA9002A2AC3B20300EB8FED /* Preview Assets.xcassets in Resources */,
+				2FA900292AC3B20300EB8FED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2F63FF06275AF7400012DEDD /* Sources */ = {
+		2F9D7E862AC3B0F70030B623 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA4359E275BE3240045839D /* ExampleJoystick.swift in Sources */,
-				2FA435AA275BE38A0045839D /* TestingView.swift in Sources */,
-				2FA4359D275BE3240045839D /* ExampleUse.swift in Sources */,
-				2FB1D424275BE49F00FA20B2 /* SwiftUIJoystickApp.swift in Sources */,
+				2FA900222AC3B1EE00EB8FED /* ExampleUse.swift in Sources */,
+				2FA900232AC3B1EE00EB8FED /* ExampleJoystick.swift in Sources */,
+				2FA900252AC3B1EE00EB8FED /* SwiftUIJoystickApp.swift in Sources */,
+				2FA900242AC3B1EE00EB8FED /* TestingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2F63FF16275AF7420012DEDD /* Debug */ = {
+		2F9D7E962AC3B0F80030B623 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -208,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -218,14 +228,13 @@
 			};
 			name = Debug;
 		};
-		2F63FF17275AF7420012DEDD /* Release */ = {
+		2F9D7E972AC3B0F80030B623 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -263,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -273,14 +282,14 @@
 			};
 			name = Release;
 		};
-		2F63FF19275AF7420012DEDD /* Debug */ = {
+		2F9D7E992AC3B0F80030B623 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIJoystickApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = KLQC884752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,21 +304,21 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelrobertellis.SwiftUIJoystickApp;
-				PRODUCT_NAME = SwiftUIJoystickAppApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2F63FF1A275AF7420012DEDD /* Release */ = {
+		2F9D7E9A2AC3B0F80030B623 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIJoystickApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = KLQC884752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -324,7 +333,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelrobertellis.SwiftUIJoystickApp;
-				PRODUCT_NAME = SwiftUIJoystickAppApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,25 +343,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F63FF05275AF7400012DEDD /* Build configuration list for PBXProject "SwiftUIJoystickApp" */ = {
+		2F9D7E852AC3B0F70030B623 /* Build configuration list for PBXProject "SwiftUIJoystickApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F63FF16275AF7420012DEDD /* Debug */,
-				2F63FF17275AF7420012DEDD /* Release */,
+				2F9D7E962AC3B0F80030B623 /* Debug */,
+				2F9D7E972AC3B0F80030B623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F63FF18275AF7420012DEDD /* Build configuration list for PBXNativeTarget "SwiftUIJoystickApp" */ = {
+		2F9D7E982AC3B0F80030B623 /* Build configuration list for PBXNativeTarget "SwiftUIJoystickApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F63FF19275AF7420012DEDD /* Debug */,
-				2F63FF1A275AF7420012DEDD /* Release */,
+				2F9D7E992AC3B0F80030B623 /* Debug */,
+				2F9D7E9A2AC3B0F80030B623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FA9002E2AC3B39700EB8FED /* SwiftUIJoystick */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIJoystick;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 2F63FF02275AF7400012DEDD /* Project object */;
+	rootObject = 2F9D7E822AC3B0F70030B623 /* Project object */;
 }
