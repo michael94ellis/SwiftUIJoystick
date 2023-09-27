@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F4F9D1A2AC3A79C00BF2733 /* SwiftUIJoystick */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIJoystick; sourceTree = "<group>"; };
+		2F3533D72AC3A8A400C9ABEB /* SwiftUIJoystick */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIJoystick; sourceTree = "<group>"; };
 		2F63FF0A275AF7400012DEDD /* SwiftUIJoystickAppApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIJoystickAppApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F63FF11275AF7420012DEDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F63FF14275AF7420012DEDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -37,10 +37,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F4F9D192AC3A79C00BF2733 /* Packages */ = {
+		2F3533D62AC3A8A400C9ABEB /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				2F4F9D1A2AC3A79C00BF2733 /* SwiftUIJoystick */,
+				2F3533D72AC3A8A400C9ABEB /* SwiftUIJoystick */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -48,7 +48,7 @@
 		2F63FF01275AF7400012DEDD = {
 			isa = PBXGroup;
 			children = (
-				2F4F9D192AC3A79C00BF2733 /* Packages */,
+				2F3533D62AC3A8A400C9ABEB /* Packages */,
 				2F63FF0C275AF7400012DEDD /* SwiftUIJoystickApp */,
 				2F63FF0B275AF7400012DEDD /* Products */,
 			);
