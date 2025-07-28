@@ -194,4 +194,4 @@ c941010623 - https://github.com/c941010623
 
 ## 📃 License
 
-`SwiftUIJoystick` is available under the MIT license. See the [LICENSE](https://github.com/michael94ellis/SwiftUIJoystick/blob/main/LICENSE) file for more info
+`SwiftUIJoystick` is available under the MIT license. See the [LICENSE](https://github.com/michael94ellis/SwiftUIJoystick/blob/main/LICENSE) file for more info 
